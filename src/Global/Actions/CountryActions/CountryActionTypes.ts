@@ -3,6 +3,13 @@ export const GET_SINGLE_COUNTRY = "GET_SINGLE_COUNTRY"
 export const SEARCH_BY_NAME = "SEARCH_BY_NAME"
 export const SELECT_BY_REGION = "SELECT_BY_REGION"
 
+export type SingleLanguageDataType = {
+    name:string;
+    nativeName:string;
+    iso639_1:string;
+}
+
+
 export type SingleCountry = {
     name:string;
     topLevelDomain: string [];
@@ -14,6 +21,7 @@ export type SingleCountry = {
     subregion: string;
     population: number;
     latlng: number [];
+    languages: SingleLanguageDataType[]
     demonym: string;
     area: number;
     gini: number;

@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import {GiRingedPlanet} from 'react-icons/gi'
-import {GiWorld} from 'react-icons/gi'
+import {BsInfoCircle} from 'react-icons/bs'
 import {AiOutlineHome} from 'react-icons/ai'
 
 const Navi = () => {
@@ -26,9 +26,9 @@ const Navi = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link d-flex align-items-center" to="/company">
-                                <GiWorld className="me-1" fontSize={20}/>
-                                All Countries
+                            <NavLink className="nav-link d-flex align-items-center" to="/about">
+                                <BsInfoCircle className="me-1" fontSize={20}/>
+                                About
                             </NavLink>
                         </li>
                     </ul>
