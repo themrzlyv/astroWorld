@@ -31,7 +31,7 @@ export interface GetAllCountries {
 
 export interface GetSingleCountry {
     type: typeof GET_SINGLE_COUNTRY;
-    payload: SingleCountry
+    payload: SingleCountry[]
 }
 
 export interface SearchByName {

@@ -2,7 +2,7 @@ import { CountryDispatchType, GET_ALL_COUNTRIES, GET_SINGLE_COUNTRY, SEARCH_BY_N
 
 interface Istate {
     countries?:SingleCountry[];
-    country?: SingleCountry
+    country?: SingleCountry[]
 }
 
 const initialState:Istate = {
@@ -13,6 +13,7 @@ export const CountryReducer = (state:Istate = initialState,action:CountryDispatc
     switch (action.type) {
         case GET_ALL_COUNTRIES:
             return {
+                ...state,
                 countries: action.payload
             };
         case GET_SINGLE_COUNTRY:
