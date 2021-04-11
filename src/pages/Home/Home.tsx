@@ -78,7 +78,7 @@ const Home = () => {
                 {
                     countries === undefined || countries.length === undefined ? 
                     skeletonArray.map(item => (
-                            <div className="col-lg-4  mx-auto mb-1">
+                            <div key={Math.random()} className="col-lg-4  mx-auto mb-1">
                                 <SkeletonTheme color="#C3C3C3">
                                     <Skeleton height="13em" width="100%" />
                                 </SkeletonTheme>
