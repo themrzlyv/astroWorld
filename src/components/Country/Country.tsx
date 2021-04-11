@@ -6,6 +6,7 @@ import {RiMapPin5Line} from 'react-icons/ri'
 import {IoIosPeople} from 'react-icons/io'
 import {ImEarth} from 'react-icons/im'
 import {BiSearchAlt2} from 'react-icons/bi'
+import { NavLink } from 'react-router-dom'
 
 interface Iprops {
     country:SingleCountry
@@ -30,10 +31,10 @@ const Country:React.FC<Iprops> = ({country}) => {
                         <ImEarth fontSize={18} />
                         <span className=" ms-2">{country.region}</span>
                     </p>
-                    <button className="btn btn-primary">
+                    <NavLink to={`/country/${country.name}`} className="btn btn-primary">
                         <BiSearchAlt2 fontSize={15} />
                         <span className="mx-1">Explore</span>
-                    </button>
+                    </NavLink>
                 </div>
             </div>
         </div>

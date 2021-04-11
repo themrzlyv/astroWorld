@@ -1,4 +1,5 @@
 export const GET_ALL_COUNTRIES = "GET_ALL_COUNTRIES"
+export const GET_SINGLE_COUNTRY = "GET_SINGLE_COUNTRY"
 export const SEARCH_BY_NAME = "SEARCH_BY_NAME"
 export const SELECT_BY_REGION = "SELECT_BY_REGION"
 
@@ -28,6 +29,11 @@ export interface GetAllCountries {
     payload: SingleCountry[]
 }
 
+export interface GetSingleCountry {
+    type: typeof GET_SINGLE_COUNTRY;
+    payload: SingleCountry
+}
+
 export interface SearchByName {
     type: typeof SEARCH_BY_NAME;
     payload: SingleCountry[]
@@ -38,4 +44,4 @@ export interface SelectByRegion {
     payload: SingleCountry[]
 }
 
-export type CountryDispatchType = GetAllCountries | SearchByName | SelectByRegion
+export type CountryDispatchType = GetAllCountries | GetSingleCountry | SearchByName | SelectByRegion

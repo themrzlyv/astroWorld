@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Navi from './components/Head/Navi'
+import Navigator from './components/Head/Navigator'
 import { getAllCountries } from './Global/Actions/CountryActions/CountryAction'
 import Main from './pages/Main'
 
@@ -15,6 +16,9 @@ const App = () => {
         <div className="container-fluid "> 
             <div className="row">
                 <Navi />
+            </div>
+            <div className="row">
+                <Navigator />
             </div>
             <div className="row">
                 <div className="col-lg-10 mx-auto">

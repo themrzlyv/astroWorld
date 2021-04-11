@@ -1,7 +1,8 @@
-import { CountryDispatchType, GET_ALL_COUNTRIES, SEARCH_BY_NAME, SELECT_BY_REGION, SingleCountry } from "../Actions/CountryActions/CountryActionTypes";
+import { CountryDispatchType, GET_ALL_COUNTRIES, GET_SINGLE_COUNTRY, SEARCH_BY_NAME, SELECT_BY_REGION, SingleCountry } from "../Actions/CountryActions/CountryActionTypes";
 
 interface Istate {
-    countries?:SingleCountry[]
+    countries?:SingleCountry[];
+    country?: SingleCountry
 }
 
 const initialState:Istate = {
@@ -13,6 +14,11 @@ export const CountryReducer = (state:Istate = initialState,action:CountryDispatc
         case GET_ALL_COUNTRIES:
             return {
                 countries: action.payload
+            };
+        case GET_SINGLE_COUNTRY:
+            return {
+                ...state,
+                country: action.payload
             };
         case SEARCH_BY_NAME:
             return {
